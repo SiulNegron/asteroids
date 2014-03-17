@@ -59,15 +59,12 @@ public class move : MonoBehaviour {
 			
 								transform.Translate (0, 1 * height, 0, Space.Self);
 						}*/
-						transform.Rotate (0, -rlrot, 0);
+		transform.Rotate (0, -rlrot, 0);
 
 		Vector3 fast = new Vector3 (side,0,forward);
 		fast= transform.rotation* fast;
 
 		CharacterController cc = GetComponent<CharacterController> ();
-
-			cc.Move (fast*Time.deltaTime)
-						
-	
+		cc.Move (fast*Time.deltaTime);
 	}
 }
